@@ -1,0 +1,215 @@
+@media(max-width:1250px){
+    .header__fixed{
+        padding: 50px 10px 43px 10px;
+    }
+    .hero-inner-wrapper{
+        padding: 93px 10px 33px 10px;
+        background-size: auto;
+    }
+    .sevice{
+        padding: 141px 10px 166px 10px;
+    }
+    vegetable-inner-wrapper{
+        padding: 89px 10px 143px 10px;
+    }
+    .customers {
+        padding: 96px 10px 150px 10px;
+    }
+    .customers-title{
+        padding: 96px,10px,150px,10px;
+    }
+    .section.app {
+        padding: 0 10px 140px;
+    }
+    .app-wrapper {
+        padding: 0 50px;
+    }
+    .footer{
+        padding: 67px 10px 118px;
+    }
+}
+@media(max-width:980px){
+    .hero-wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .hero-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex: 1;
+        gap: 10px;
+    }
+    .hero-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .hero-img{
+        width: 100%;
+    }
+    .customers-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .app-wrapper {
+        padding: 0;
+        flex-direction: column-reverse;
+    }
+    .footer-wrapper {
+        width: 48%;
+    }
+}
+@media(max-width:850px){
+    .nav{
+        position: absolute;
+        z-index: 2;
+        background: #ffffff;
+        left: -50%;
+        right: 100%;
+        /* делаем 100% чтобы скрыть меню */
+        bottom: 0;
+        top: 120px;
+        height: 100vh;
+        overflow-x: hidden;
+        /* чтобы прятать меню и по клику оно выезжало и обрезает все элементы которые воходят за родительский блок */
+        border-top: 1px solid #c3c3c3;
+        transition: 0.3s linear;
+    }
+    /* чтобы было на весь экран и на след строке */
+
+    .nav.active{
+        right: 0;
+        /* чтобы элементы меню появились по клику кнопки */
+        left: 0;
+    }
+
+    .menu{
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+        /* чтобы элементы бля колонкой */
+    }
+    .burger{
+        display: block;
+        /* в html мы написали dn чтобы исчезло а тут мы при 850 пишем db чтобы наше меню показывалось */
+        width: 60px;
+        height: 40px;
+        background: url(../images/bars-solid.svg) no-repeat center;
+        transform: rotate(0deg);
+        transition: 0.3s linear;
+    }
+
+    .burger.active{
+        /* .burger.active когда пишем так это мы хотим чтобы у 2 элементов сработало правило если между ними поставим пробел то это внутри бургера есть класс эктив и которому мы хотим что то написать это не правильно */
+        background: url(../images/brain-solid.svg) no-repeat center;
+        transform: rotate(360deg);
+        /* transform: rotate(360deg) чтобы поворачивалась картинка на 360 или можно на 180 */
+    }
+
+}
+@media(max-width:768px){
+    .header-logo{
+        width: 45px;
+    }
+    .header-link{
+        display: none;
+    }
+
+    .cart{
+        margin: 0 5px 0 20px;
+    }
+
+    .service-item{
+        margin:0 auto 20px;
+        /* чтобы было по центру */
+    }
+    .wrapper.vegetable-inner-wrapper {
+        background-size: 50%;
+    }
+    .inner-title{
+        text-align: center;
+    }
+    .customers-content {
+        width: 100%;
+    }
+    .customers-text {
+        width: 100%;
+    }
+    .customers-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .app{
+        padding: 0 10px 70px;
+    }
+
+    .app-content {
+        width: 100%;
+    }
+    .app-text {
+        width: 100%;
+    }
+    .app-title{
+        font-size: 60px;
+        line-height: 80px;
+    }
+    .footer-block {
+        width: 100%;
+    }
+    .footer-title {
+        margin: 0 0 40px;
+    }
+}
+@media(max-width:590px){
+    .service-wrapper{
+        gap: 50px;
+    }
+
+    .service-img{
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/elips-fruit.png);
+        background-position: bottom 0px center;
+        background-size: auto;
+    }
+    .customers-img {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+@media(max-width:450px){
+    form.form{
+        display: none;
+    }
+    .cart{
+        margin: 0 5px 0 0px;
+    }
+    h1.hero-title{
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    .service-item {
+        padding: 40px 20px 40px 20px;
+    }
+    .service-item span:first-child,.service-item::before{
+        display: none;
+    }
+
+    .inner-title {
+        font-size: 45px;
+        line-height: 60px;
+        text-align: center;
+    }
+    .service-img {
+        background-size: 100%;
+    }
+    .footer-text {
+        width: 100%;
+    }
+
+}

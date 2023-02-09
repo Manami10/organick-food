@@ -1,0 +1,873 @@
+/* font-family: 'DM Sans', sans-serif; */
+/* font-family: 'Rosario', sans-serif; */
+
+
+
+
+/* ============================= default style ============================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* это правило которое не будет менять размер род блока при том что не будут меняться размеры дочерних элементов например вы создали див 600 px и добавили ему бордер
+    его ширина должна увеличить на 1 пикс слева и права но благодоря бокс сайзингу все будет хорошо */
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    /* картинка всегда будет такой же шириной как родитель но никогда больше */
+}
+
+
+.btn{
+    border: none;
+    outline: none;
+    /* outline: none;- это тот же бордер которы срабатывает при клики */
+    background: transparent;
+    /* bg делаем прозрачным */
+    cursor: pointer;
+}
+
+input{
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+}
+
+.inner-title{
+    font-family: 'Rosario', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 90px;
+}
+
+.inner-text{
+    line-height: 30px;
+    color: #555555;
+}
+
+
+
+/* ============================= main style ============================= */
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    color: #222;
+}
+
+
+.hidden{
+    overflow-y: hidden;
+    /* запрешает скролить вниз */
+}
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.link-bg--green{
+    background: #09A66D;
+    color: #ffff;
+}
+
+.burger{
+    display: none;
+    /* чтобы исчезло */
+}
+
+
+.header{
+    height: 149px;
+}
+
+.header__fixed{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* чтобы при скроле все фиксировалось и не улетало */
+    background: white;
+}
+
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0 43px 0;
+}
+
+.menu{
+    display: flex;
+}
+
+.header-block{
+    display: flex;
+    align-items: center;
+}
+
+
+.menu__item:not(:last-child){
+    margin-right: 40px;
+/* это озночает всем кроме последнего */
+}
+
+.menu__link{
+    line-height: 24px;
+}
+
+.header-logo{
+    display: block;
+    width: 57px;
+}
+
+
+.form{
+    display: flex;
+    align-items: center;
+}
+
+
+.search{
+    width: 0;
+}
+
+.header-btn{
+    width: 40px;
+    height: 40px;
+    background-color: #F4FBF8;
+    background-image:url(../images/cart2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+
+.cart{
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 32px 0 20px;
+    background-color: #F4FBF8;
+    background-image:url(../images/cart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.cart::after{
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    border-radius: 50%;
+    background-color: #09A66D;
+}
+/* добавляем псевдо элемент кружочек зеленый */
+
+.header-link{
+    width: 160px;
+    padding: 10px 0;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* <!-- ************************** End header ************************* --> */
+
+
+
+/* <!-- ************************** hero ************************* --> */
+.hero{
+    background-color:#F3FBF8;
+}
+
+.hero-inner-wrapper{
+    background-image: url(../images/fresh.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding: 93px 0 33px 0;
+}
+
+.hero-title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-text{
+    max-width: 637px;
+    margin: 0 auto 59px auto;
+    text-align: center;
+}
+
+
+
+.hero-wrapper{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.hero-img{
+    position: relative;
+    width: 863px;
+}
+
+.link{
+    padding: 10px 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 5px;
+    transition: 0.3s linear;
+}
+
+.hero-link{
+    position: absolute;
+    top: -28px;
+    right: 20%;
+    width: 176px;
+    height: 74px;
+
+
+}
+
+.link::after{
+    content: "";
+    width: 64px;
+    height: 64px;
+    background: #09A66D url(../images/arrow-right.svg) no-repeat center ;
+    right: 0;
+    top: 0;
+    /* transform: translateY(-50%); */
+    border-radius: 50%;
+}
+
+.link:hover{
+    box-shadow: inset 0px 0px 10px 0px #0000006f;
+    /* создаем тень при наведении */
+}
+
+
+.hero-list{
+    width: 250px;
+
+}
+
+.hero-item:not(:last-child){
+margin-bottom: 30px;
+/* всем кроме последнего */
+}
+
+
+.hero-item{
+    width: 250px;
+    padding: 17px 33px 17px 113px;
+    font-size: 48px;
+    line-height: 48px;
+    color: black;
+}
+
+.hero-item span{
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+
+}
+
+
+.users{
+    background-color: #ffff;
+    background-image: url(../images/users.svg);
+    background-repeat: no-repeat;
+    background-position: left 33px center;
+}
+.starts{
+    background-color: #ffff;
+    background-image: url(../images/stars.svg);
+    background-repeat: no-repeat;
+    background-position: left 33px center;
+}
+
+.items{
+    background-color: #ffff;
+    background-image: url(../images/harvest.svg);
+    background-repeat: no-repeat;
+    background-position: left 33px center;
+}
+
+
+/* <!-- ************************** end hero ************************* --> */
+
+
+
+
+/* <!-- ************************** section service ************************* --> */
+.service{
+    padding: 141px 0 166px 0;
+}
+
+.service-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    /* блок который нее помешается переходит на новую строку */
+}
+
+.service-conten{
+    width: 671px;
+    padding-bottom: 32px;
+    position: relative;
+}
+
+
+.service-title{
+    margin-bottom: 20px;
+}
+
+.service-text{
+    margin-bottom: 16px;
+}
+
+.service-item{
+    max-width: 500px;
+    width: 100%;
+    background: #FFFFFF;
+    position: relative;
+    padding: 40px 59px 40px 163px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.service-item:hover{
+    background: #F3FBF8;
+}
+
+.service-item::before{
+    content: "";
+    /* без ковычек псевдо элемент показывать не будет */
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #555555;
+    top: 50%;
+    left: 50px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s linear;
+}
+
+.service-item:hover::before{
+    background: #FFFFFF;
+}
+
+.icon-delivery{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background:url(../images/delivery-man.svg)no-repeat center ;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%);
+}
+
+.icon-order{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background:url(../images/shopping.svg)no-repeat center ;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%);
+}
+
+.icon-time{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background:url(../images/fast-time.svg)no-repeat center ;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%);
+
+}
+
+.service-item__title{
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 8px;
+
+}
+
+.service-item__text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+}
+
+.service-link{
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 34px;
+    background: url(../images/arrow-down.svg);
+    bottom: 0;
+    left: 35%;
+    animation: move 2s linear infinite;
+}
+
+.service-img{
+    width: 569px;
+    height: 569px;
+    display: flex;
+    justify-content: center;
+    padding-top: 31px;
+    background-image: url(../images/elips-fruit.png),url(../images/Ellipse-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom 76px center, right 0 center;
+    background-size: 398px, contain;
+    /* пишем contain чтобы на 2 картинку не распостранялся bgs */
+
+
+}
+
+.service-img figure{
+    max-width: 354px;
+    width: 100%;
+    animation: moveImg 2s linear infinite;
+}
+
+@keyframes move{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 10px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+/* это мы добавили анимацию движешейся стрелочки */
+@keyframes moveImg{
+    0%{
+        transform: translateY(0px);
+        /* двигать по вертикали */
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    /* тут мы сделали чтобы человек двигался */
+}
+
+/* <!-- ************************** end section service ************************* --> */
+
+/* <!-- ************************** section vegetable ************************* --> */
+
+.vegetable{
+    background: rgba(9, 166, 109, 0.05);
+}
+
+.vegetable-inner-wrapper{
+    padding: 89px 0 143px 0;
+    background-image: url(../images/fresh-melientha-suavis.png);
+    background-repeat: no-repeat;
+    background-position: right 50px bottom;
+    background-size: auto;
+}
+
+.vegetable-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    /* чтобы элементы при уменьшении браузера автоматически становились друг под другом */
+    justify-content: center;
+    /* при переносе на новую строку всегда были отцентрованы */
+    gap: 50px;
+    /* браузер сам определяет когда отступы и куда */
+}
+
+.vegetable-img {
+    max-width: 600px;
+    width: 100%;
+}
+
+.vegetable-contant{
+    max-width: 574px;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.vegetable-text{
+    margin: 20px 0 50px 0;
+}
+
+.vegetable-link{
+    width: 179px;
+    height: 74px;
+}
+
+
+/* <!-- ************************** end vegetable ************************* --> */
+
+
+/* <!-- ************************** section customers ************************* --> */
+
+.customers{
+    padding: 96px 0 150px 0;
+}
+
+.customers-wrapper{
+    display: flex;
+    align-items: flex-end;
+    /* прибиваем к нижней части */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.customers-content{
+    width: 640px;
+    padding-bottom: 34px;
+}
+.customers-text{
+    width: 586px;
+    margin: 30px 0 40px 0;
+}
+
+.customers-name{
+    font-size: 30px;
+    line-height: 36px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.customers-img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #F3FBF8;
+    animation: moveImg 2s linear infinite;
+}
+
+.customers-stars{
+    display: flex;
+    gap: 9px;
+}
+
+.slider-btn{
+    width: 56px;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    /* чтобы не исчезла 2 кнопка */
+    bottom: 15px;
+}
+
+.slider-prev{
+    left: 27%;
+}
+
+.slider-prev::before{
+    content: "";
+    display: block;
+    width: 12px;
+    height: 18px;
+    background: url(../images/vector-left.svg) no-repeat center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* чтобы элемент стал четко по центру */
+}
+
+.slider-prev.active{
+    background: #09A66D ;
+    border: 1px solid #09A66D;
+}
+
+.slider-prev.active::before{
+    content: "";
+    background: url(../images/vector-left-active.svg) no-repeat center;
+
+}
+
+.slider-next{
+    left: 34%;
+
+}
+
+.slider-next::before{
+    content: "";
+    display: block;
+    width: 12px;
+    height: 18px;
+    background: url(../images/vector-right.svg) no-repeat center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-next.active{
+    background: #09A66D ;
+    border: 1px solid #09A66D;
+}
+
+.slider-next.active::before{
+    content: "";
+    background: url(../images/vector-right-active.svg) no-repeat center;
+
+}
+
+.slick-dots {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+}
+
+.slick-dots li{
+    font-size: 0;
+    line-height: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #A6A6A6;
+}
+.slick-dots li button{
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    background: transparent;
+}
+
+.slick-dots li.slick-active{
+    background: #555555;
+}
+
+
+/* <!-- ************************** end section customers ************************* --> */
+
+
+/* <!-- ************************** section app ************************* --> */
+
+.app{
+    padding-bottom: 140px;
+
+}
+
+.app-wrapper{
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.app-img{
+    width: 265px;
+    animation: moveImg 2s linear infinite;
+}
+
+.app-content{
+    width: 663px;
+}
+
+
+.app-subtitle{
+    display: block;
+    width: 170px;
+    padding: 11px 0;
+    text-align: center;
+    background: #F3FBF8;
+    border-radius: 50px;
+    color: #333333;
+    margin-bottom: 27px;
+}
+
+.app-text{
+    width: 574px;
+    margin: 20px 0 50px 0;
+}
+
+.app-block{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.app-link{
+    width: 104px;
+    border: 1px solid #A6A6A6;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: #FFFFFF;
+    display: block;
+    transition: 0.3s linear;
+}
+
+.app-link:hover{
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0,0.35);
+    transform: skew(10deg, 0deg);
+    /* искажем элемент */
+}
+
+.app-store{
+    background:#222 url(../images/aple.svg) no-repeat left 12px center;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+    padding-left: 34px;
+    letter-spacing: 0.5px;
+}
+
+.app-store span{
+    display: block;
+    margin-bottom: 3px;
+    font-size: 6px;
+    line-height: 7px;
+    letter-spacing: 0.7px;
+}
+
+.google-play{
+    background:#222 url(../images/google.svg) no-repeat left 8px center;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    padding-left: 32px;
+}
+
+.google-play span{
+    display: block;
+    margin-bottom: 3px;
+    font-size: 6px;
+    line-height: 7px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+
+}
+
+/* <!-- ************************** end section app ************************* --> */
+
+/* <!-- ************************** section footer ************************* --> */
+
+.footer{
+    background: #FCFFFD;
+    padding: 67px 0 118px;
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-logo{
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+.footer-text{
+    width: 345px;
+}
+
+.footer-title{
+    display: block;
+    margin: 39px 0 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+
+}
+
+.footer-item:not(:last-child){
+    margin-bottom: 24px;
+}
+
+.footer-link{
+    line-height:23px;
+    color: #555555;
+}
+
+.footer-social{
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.footer-social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    box-shadow: 6px 6px 10px -1px rgba(0,124,196,0.15);
+    border: 1px solid rgba(0,124,196,0);
+    transition: transform 0.5s;
+}
+
+.footer-social a img{
+    transform: scale(1);
+}
+
+.footer-social a:hover{
+    box-shadow: inset 4px 4px 6px -2px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,124,196,0);
+}
+
+.footer-social a:hover img{
+    transform: scale(0.7);
+    transition: transform 0.5s;
+}
+/* чтобы была анимаци удаляющейся иконки */
+
+/* <!-- ************************** end section footer ************************* --> */
